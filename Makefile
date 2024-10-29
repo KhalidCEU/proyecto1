@@ -11,6 +11,8 @@ MAIN_CLASS	=	$(MAIN_DIR).Main
 
 SRC_DIR		=	./src
 
+NAME		=	a.out
+
 OUT_DIR		=	bin
 
 LIB_DIR		=	./lib
@@ -27,8 +29,8 @@ compile: clean
 
 executable: compile
 	@echo '#!/bin/sh' > ./a.out
-	@echo 'java -cp $(OUT_DIR) $(MAIN_CLASS) "$$@"' >> ./a.out
-	@chmod +x ./a.out
+	@echo 'java -cp $(OUT_DIR) $(MAIN_CLASS) "$$@"' >> $(NAME)
+	@chmod +x $(NAME)
 
 jar: compile
 	mkdir -p $(dir $(JAR_FILE))
@@ -37,6 +39,9 @@ jar: compile
 	@echo "Class-Path: . " >> manifest.txt
 	@echo "" >> manifest.txt
 	jar cvfm $(JAR_FILE) manifest.txt -C $(OUT_DIR) .
+
+runjar: jar
+	java -jar $(JAR_FILE)
 
 javadoc: compile
 	find . -type f -name "*.java" | xargs javadoc -d $(DOC_DIR) -encoding utf-8 -docencoding utf-8 -charset utf-8
@@ -51,4 +56,6 @@ clean:
 	rm -rf $(OUT_DIR)
 	rm -rf $(DOC_DIR)
 	rm -f $(JAR_FILE)
-	rm -f ./a.out
+
+fclean: clean
+	rm -f $(NAME)
