@@ -22,7 +22,7 @@ public class Cli {
     }
 
     public String[] readCommands() {
-        String input = sc.nextLine();
+        String input = sc.nextLine().toLowerCase();
         return input.split(" ");
     }
 

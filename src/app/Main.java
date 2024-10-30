@@ -1,5 +1,4 @@
 package app;
-import crud.*;
 import CLI.Cli;
 
 public class Main {
