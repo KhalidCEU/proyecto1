@@ -48,7 +48,7 @@ public class Crud {
         System.out.println("\nProductos:\n");
 
         for (ClothingItem p : products) {
-            System.out.println("" + p.toString());
+            System.out.println(p.toString());
             System.out.print("\n");
         }
     }
