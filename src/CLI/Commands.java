@@ -11,6 +11,7 @@ public class Commands {
     public Commands(Scanner sc) {
         this.sc = sc;
         crud = new Crud();
+        crud.loadProducts();
     }
 
     public void createProduct() {
@@ -41,8 +42,13 @@ public class Commands {
         crud.createProduct(type, "1 (test)", name, color, size, price);
     }
 
+    public void list() {
+        crud.readProducts();
+    }
+
     public void exit() {
-        System.out.println("Hasta la próxima!");
+        crud.saveProducts();
+        System.out.println("See you!");
         running = false;
     }
 

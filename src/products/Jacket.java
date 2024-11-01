@@ -26,7 +26,7 @@ public class Jacket extends ClothingItem {
         StringBuilder sb = new StringBuilder();
 
         sb.append("Jacket :\n")
-            .append("- Color:").append(this.getColor()).append("\n")
+            .append("- Color: ").append(this.getColor()).append("\n")
             .append("- Name: ").append(this.getName()).append("\n")
             .append("- Price: ").append(this.getPrice()).append("\n")
             .append("- Material: ").append(this.material);

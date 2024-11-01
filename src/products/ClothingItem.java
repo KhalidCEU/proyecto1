@@ -1,8 +1,9 @@
 package products;
 
+import java.io.Serializable;
 import java.util.List;
 
-public abstract class ClothingItem {
+public abstract class ClothingItem implements Serializable {
     private String productId;
     private String name;
     private String color;

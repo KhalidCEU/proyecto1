@@ -56,6 +56,7 @@ clean:
 	rm -rf $(OUT_DIR)
 	rm -rf $(DOC_DIR)
 	rm -f $(JAR_FILE)
+	rm -f *.dat
 
 fclean: clean
 	rm -f $(NAME)
