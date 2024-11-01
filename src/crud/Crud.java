@@ -40,9 +40,12 @@ public class Crud {
     }
 
     public void readProducts() {
-        System.out.print("\n");
-        System.out.println("Productos:");
-        System.out.print("\n");
+        if (products.isEmpty()) {
+            System.out.println("No products available");
+            return;
+        }
+
+        System.out.println("\nProductos:\n");
 
         for (ClothingItem p : products) {
             System.out.println("" + p.toString());
