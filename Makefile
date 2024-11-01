@@ -32,12 +32,14 @@ executable: compile
 	@echo 'java -cp $(OUT_DIR) $(MAIN_CLASS) "$$@"' >> $(NAME)
 	@chmod +x $(NAME)
 
-jar: compile
-	mkdir -p $(dir $(JAR_FILE))
+manifest:
 	@echo "Manifest-Version: 1.0" > manifest.txt
 	@echo "Main-Class: $(MAIN_CLASS)" >> manifest.txt
-	@echo "Class-Path: . " >> manifest.txt
+	@echo "Class-Path: ." >> manifest.txt
 	@echo "" >> manifest.txt
+
+jar: manifest compile
+	mkdir -p $(dir $(JAR_FILE))
 	jar cvfm $(JAR_FILE) manifest.txt -C $(OUT_DIR) .
 
 runjar: jar
