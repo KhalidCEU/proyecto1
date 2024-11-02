@@ -21,6 +21,8 @@ Then, **launch** the generated executable with the following command :
 > You can also generate and run a ```.jar``` file directly instead, with the command ```make runjar```.
 > You can find other available Makefile commands [here](/docs/make.md)
 
+<br>
+
 This will automatically launch the **CLI**. Here's how to use it :
 
 ```
@@ -37,8 +39,7 @@ OPTIONS:
 
 ## Data Persistence
 
-The program uses object persistance using Java's ```ObjectOutputStream```and ```ObjectInputStream```, automatically saving created products to a file (_"data.dat"_) when exiting. It also loads data from (_"data.dat"_) file if it exists upon launch.
-
+The program uses object persistence using Java's ```ObjectOutputStream```and ```ObjectInputStream```, automatically saving created products to a file (_"data.dat"_) when exiting. It also loads data from (_"data.dat"_) file if it exists upon launch.
 
 ## License
 

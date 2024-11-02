@@ -12,7 +12,7 @@ To clean the generated files :
 make clean
 ```
 
-To clean includiing the executable :
+To clean including the executable :
 ```
 make fclean
 ```
@@ -31,5 +31,3 @@ To compile and run in debug mode :
 ```
 make debug
 ```
-
-
