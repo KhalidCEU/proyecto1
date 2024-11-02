@@ -38,3 +38,8 @@ OPTIONS:
 ## Data Persistence
 
 The program uses object persistance using Java's ```ObjectOutputStream```and ```ObjectInputStream```, automatically saving created products to a file (_"data.dat"_) when exiting. It also loads data from (_"data.dat"_) file if it exists upon launch.
+
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](/LICENSE) file for details.
