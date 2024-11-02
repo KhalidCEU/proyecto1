@@ -41,6 +41,14 @@ OPTIONS:
 
 The program uses object persistence using Java's ```ObjectOutputStream```and ```ObjectInputStream```, automatically saving created products to a file (_"data.dat"_) when exiting. It also loads data from (_"data.dat"_) file if it exists upon launch.
 
+## UML Diagram
+
+<br>
+
+<p align="center">
+  <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/khalidCEU/proyecto1/refs/heads/main/docs/diagram.puml" alt="Class Diagram" width=40%>
+</p>
+
 ## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](/LICENSE) file for details.
