@@ -33,7 +33,6 @@
                         <UML:Operation name="createProduct()" visibility="public" xmi.id="att34"/>
                         <UML:Operation name="list()" visibility="public" xmi.id="att35"/>
                         <UML:Operation name="exit()" visibility="public" xmi.id="att36"/>
-                        <UML:Operation name="print()" visibility="public" xmi.id="att37"/>
                         <UML:Operation name="isRunning() : boolean" visibility="public" xmi.id="att38"/>
                     </UML:Classifier.feature>
                 </UML:Class>

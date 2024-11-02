@@ -85,10 +85,6 @@ public class Commands {
         running = false;
     }
 
-    public void print() {
-        System.out.println("Print function.");
-    }
-
     /**
      * Returns the current running state of the CLI.
      *
