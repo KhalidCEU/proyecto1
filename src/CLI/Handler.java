@@ -31,7 +31,7 @@ public class Handler {
      *
      * @param commandName The name of the command to find.
      * @return A {@link Consumer<Commands>} object that represents the method
-     * to execute for the given command, or null if the commands isn't found.
+     * to execute for the given command, or null if the command isn't found.
      */
     public Consumer<Commands> getCommand(String commandName) {
         return commands.get(commandName);
