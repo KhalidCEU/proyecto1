@@ -96,7 +96,6 @@ public class Crud {
     public void loadProducts() {
         try {
             products = storageManager.loadProducts();
-            System.out.println("Products loaded successfully");
         }  catch (Exception e) {
             System.out.println("Failed to load products" + e.getMessage());
         }

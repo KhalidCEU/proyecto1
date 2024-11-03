@@ -34,6 +34,7 @@ public class StorageManager {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
             ArrayList<ClothingItem> fileProducts = (ArrayList<ClothingItem>) inputStream.readObject();
             inputStream.close();
+            System.out.println("Products loaded successfully");
             return fileProducts;
         } catch (Exception e) {
             System.out.println("Got an error while reading products: " + e);
