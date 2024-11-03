@@ -34,11 +34,12 @@ public class Commands {
      * This method is called when the "add product" command is entered in the CLI
      */
     public void createProduct() {
-        System.out.println("Enter the type of product you want to create: ");
+        System.out.println("Enter the type of product you want to create: "
+            + ClothingItem.VALID_ITEM_TYPES);
         String type = sc.nextLine().toLowerCase();
 
         if (!ClothingItem.isValidItemType(type)) {
-            System.out.println("Wrong or non exissting product type. Valid types are : "
+            System.out.println("Wrong or non existing product type. Valid types are : "
                 + ClothingItem.VALID_ITEM_TYPES);
             return;
         }
@@ -47,11 +48,12 @@ public class Commands {
         String name = sc.nextLine();
         System.out.println("Enter a color for this product: ");
         String color = sc.nextLine();
-        System.out.println("Enter a size for this product: ");
+        System.out.println("Enter a size for this product: " + ClothingItem.VALID_SIZES);
         String size = sc.nextLine().toLowerCase();
 
         if (!ClothingItem.isValidSize(size)) {
-            System.out.println("Wrong or non existing product size. Valid sizes are : " + ClothingItem.VALID_SIZES);
+            System.out.println("Wrong or non existing product size. Valid sizes are : "
+                + ClothingItem.VALID_SIZES);
             return;
         }
 
