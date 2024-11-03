@@ -2,6 +2,7 @@ package products;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Scanner;
 
 public abstract class ClothingItem implements Serializable {
     private String productId;
@@ -9,10 +10,11 @@ public abstract class ClothingItem implements Serializable {
     private String color;
     private String size;
     private Float price;
+    public abstract void setCustomAttribute(Scanner sc);
+    public abstract String getType();
 
     public static List<String> VALID_SIZES = List.of("xs", "s", "m", "l", "xl");
     public static List<String> VALID_ITEM_TYPES = List.of("jacket", "jeans", "shoes");
-
 
     public ClothingItem(String productId, String name, String color, String size, Float price) {
         this.productId = productId;

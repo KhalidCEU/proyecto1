@@ -5,6 +5,7 @@ import data.*;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 import java.util.function.Supplier;
@@ -36,7 +37,9 @@ public class Crud {
      * @param price The price of the clothing item.
      * @return The created ClothingItem object added to the products list.
      */
-    public ClothingItem createProduct(String productType, String productId, String name, String color, String size, float price) {
+    public ClothingItem createProduct(String productType, String productId,
+        String name,String color, String size, float price) {
+
         Supplier<ClothingItem> itemSupplier = itemTypesMap.get(productType);
 
         if (itemSupplier == null) {
@@ -49,9 +52,11 @@ public class Crud {
         item.setName(name);
         item.setColor(color);
         item.setSize(size);
+        item.setCustomAttribute(new Scanner(System.in));
         item.setPrice(price);
         products.add(item);
 
+        System.out.println(item.getType() + " created succesfully !");
         return item;
     }
 

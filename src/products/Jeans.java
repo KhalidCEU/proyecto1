@@ -1,12 +1,13 @@
 package products;
 
+import java.util.Scanner;
+
 public class Jeans extends ClothingItem {
     private String fit;
 
     public Jeans(String productId, String name, String color, String size, Float price, String fit) {
         super(productId, name, color, size, price);
         this.fit = fit;
-        System.out.println("Jeans created succesfully !");
     }
 
     public String getFit() {
@@ -17,8 +18,15 @@ public class Jeans extends ClothingItem {
         this.fit = fit;
     }
 
+    @Override
     public String getType() {
         return "Jeans";
+    }
+
+    @Override
+    public void setCustomAttribute(Scanner sc) {
+        System.out.println("Enter the fit for this jeans:");
+        this.fit = sc.nextLine();
     }
 
     @Override
@@ -26,10 +34,11 @@ public class Jeans extends ClothingItem {
         StringBuilder sb = new StringBuilder();
 
         sb.append("Jeans :\n")
-            .append("- Color: ").append(this.getColor()).append("\n")
             .append("- Name: ").append(this.getName()).append("\n")
-            .append("- Price: ").append(this.getPrice()).append("\n")
-            .append("- Fit: ").append(this.fit);
+            .append("- Color: ").append(this.getColor()).append("\n")
+            .append("- Size: ").append(this.getSize()).append("\n")
+            .append("- Fit: ").append(this.fit).append("\n")
+            .append("- Price: ").append(this.getPrice());
 
         return sb.toString();
     }
