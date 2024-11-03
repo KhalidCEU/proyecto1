@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 public class Crud {
     private Map<String, Supplier<ClothingItem>> itemTypesMap = new HashMap<>();
-    private ArrayList<ClothingItem> products = new ArrayList<>();
+    private ArrayList<ClothingItem> products;
     private StorageManager storageManager = new StorageManager();
 
     public Crud() {
