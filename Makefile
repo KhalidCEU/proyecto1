@@ -46,7 +46,7 @@ runjar: jar
 	java -jar $(JAR_FILE)
 
 javadoc: compile
-	find . -type f -name "*.java" | xargs javadoc -d $(DOC_DIR) -encoding utf-8 -docencoding utf-8 -charset utf-8
+	find . -type f -name "*.java" | xargs javadoc -d $(DOC_DIR) -Xdoclint:all,-missing -encoding utf-8 -docencoding utf-8
 
 debug: compile
 	find $(SRC_DIR) -name *.java | xargs javac -g -cp $(OUT_DIR):$(LIB_DIR) -d $(OUT_DIR)
