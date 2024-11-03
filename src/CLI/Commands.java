@@ -60,7 +60,7 @@ public class Commands {
         System.out.println("Enter a price for this product: ");
         float price = Float.parseFloat(sc.nextLine());
 
-        crud.createProduct(type, "1 (test)", name, color, size, price);
+        crud.createProduct(type, "1", name, color, size, price);
     }
 
     /**
@@ -92,7 +92,7 @@ public class Commands {
      *
      * This method indicates if the CLI should continue running or stop
      *
-     * @return the state od the running boolean;
+     * @return the state of the {@link running} boolean.
      */
     public boolean isRunning() {
         return running;
