@@ -8,9 +8,9 @@ class Cli {
     -Scanner sc
     -Commands commands
     -Handler handler
-    +void run()
-    +readCommands() : String[]
-    +execute(String[] input)
+    +run()
+    -readCommands() : String[]
+    -execute(String[] input)
 }
 
 class Commands {
@@ -50,14 +50,16 @@ class StorageManager{
     +loadProducts() : ArrayList<ClothingItem>
 }
 
-class ClothingItem {
+abstract class ClothingItem {
     -String productId
     -String name
     -String color
     -String size
     -Float price
-    -List<String> VALID_SIZES
-    -List<String> VALID_ITEM_TYPES
+    +setCustomAttribute(Scanner sc)
+    +getType(): String
+    +List<String> VALID_SIZES
+    +List<String> VALID_ITEM_TYPES
     +ClothingItem(String productId, String name, String color, String size, Float price)
     +isValidSize(String size) : boolean
     +isValidItemType(String itemType) : boolean
@@ -81,6 +83,7 @@ class Jacket {
     +getMaterial() : String
     +setMaterial(String material)
     +getType() : String
+    +setCustomAttribute(Scanner sc)
     +toString() : String
 }
 
@@ -91,12 +94,15 @@ class Jeans {
     +getFit() : String
     +setFit(String fit)
     +getType() : String
+    +setCustomAttribute(Scanner sc)
     +toString() : String
 }
 
 class Shoes {
     +Shoes(String productId, String name, String color, String size, Float price)
     +getType() : String
+    +setCustomAttribute(Scanner sc)
+    +toString() : String
 }
 
 Main --> "1" Cli

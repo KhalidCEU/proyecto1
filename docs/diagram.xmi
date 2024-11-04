@@ -19,9 +19,9 @@
                         <UML:Attribute name="Scanner sc" visibility="private" xmi.id="att24"/>
                         <UML:Attribute name="Commands commands" visibility="private" xmi.id="att25"/>
                         <UML:Attribute name="Handler handler" visibility="private" xmi.id="att26"/>
-                        <UML:Operation name="void run()" visibility="public" xmi.id="att27"/>
-                        <UML:Operation name="readCommands() : String[]" visibility="public" xmi.id="att28"/>
-                        <UML:Operation name="execute(String[] input)" visibility="public" xmi.id="att29"/>
+                        <UML:Operation name="run()" visibility="public" xmi.id="att27"/>
+                        <UML:Operation name="readCommands() : String[]" visibility="private" xmi.id="att28"/>
+                        <UML:Operation name="execute(String[] input)" visibility="private" xmi.id="att29"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Commands" xmi.id="cl0004">
@@ -65,56 +65,62 @@
                         <UML:Operation name="loadProducts() : ArrayList&lt;ClothingItem&gt;" visibility="public" xmi.id="att54"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="ClothingItem" xmi.id="cl0008">
+                <UML:Class isAbstract="true" name="ClothingItem" xmi.id="cl0008">
                     <UML:Classifier.feature>
                         <UML:Attribute name="String productId" visibility="private" xmi.id="att55"/>
                         <UML:Attribute name="String name" visibility="private" xmi.id="att56"/>
                         <UML:Attribute name="String color" visibility="private" xmi.id="att57"/>
                         <UML:Attribute name="String size" visibility="private" xmi.id="att58"/>
                         <UML:Attribute name="Float price" visibility="private" xmi.id="att59"/>
-                        <UML:Attribute name="List&lt;String&gt; VALID_SIZES" visibility="private" xmi.id="att60"/>
-                        <UML:Attribute name="List&lt;String&gt; VALID_ITEM_TYPES" visibility="private" xmi.id="att61"/>
-                        <UML:Operation name="ClothingItem(String productId, String name, String color, String size, Float price)" visibility="public" xmi.id="att62"/>
-                        <UML:Operation name="isValidSize(String size) : boolean" visibility="public" xmi.id="att63"/>
-                        <UML:Operation name="isValidItemType(String itemType) : boolean" visibility="public" xmi.id="att64"/>
-                        <UML:Operation name="getProductId(): String" visibility="public" xmi.id="att65"/>
-                        <UML:Operation name="getName(): String" visibility="public" xmi.id="att66"/>
-                        <UML:Operation name="getColor(): String" visibility="public" xmi.id="att67"/>
-                        <UML:Operation name="getSize(): String" visibility="public" xmi.id="att68"/>
-                        <UML:Operation name="getPrice() : Float" visibility="public" xmi.id="att69"/>
-                        <UML:Operation name="setProductId(String productId)" visibility="public" xmi.id="att70"/>
-                        <UML:Operation name="setName(String name)" visibility="public" xmi.id="att71"/>
-                        <UML:Operation name="setColor(String color)" visibility="public" xmi.id="att72"/>
-                        <UML:Operation name="setSize(String size)" visibility="public" xmi.id="att73"/>
-                        <UML:Operation name="setPrice(Float price)" visibility="public" xmi.id="att74"/>
+                        <UML:Attribute name="List&lt;String&gt; VALID_SIZES" visibility="public" xmi.id="att60"/>
+                        <UML:Attribute name="List&lt;String&gt; VALID_ITEM_TYPES" visibility="public" xmi.id="att61"/>
+                        <UML:Operation name="setCustomAttribute(Scanner sc)" visibility="public" xmi.id="att62"/>
+                        <UML:Operation name="getType(): String" visibility="public" xmi.id="att63"/>
+                        <UML:Operation name="ClothingItem(String productId, String name, String color, String size, Float price)" visibility="public" xmi.id="att64"/>
+                        <UML:Operation name="isValidSize(String size) : boolean" visibility="public" xmi.id="att65"/>
+                        <UML:Operation name="isValidItemType(String itemType) : boolean" visibility="public" xmi.id="att66"/>
+                        <UML:Operation name="getProductId(): String" visibility="public" xmi.id="att67"/>
+                        <UML:Operation name="getName(): String" visibility="public" xmi.id="att68"/>
+                        <UML:Operation name="getColor(): String" visibility="public" xmi.id="att69"/>
+                        <UML:Operation name="getSize(): String" visibility="public" xmi.id="att70"/>
+                        <UML:Operation name="getPrice() : Float" visibility="public" xmi.id="att71"/>
+                        <UML:Operation name="setProductId(String productId)" visibility="public" xmi.id="att72"/>
+                        <UML:Operation name="setName(String name)" visibility="public" xmi.id="att73"/>
+                        <UML:Operation name="setColor(String color)" visibility="public" xmi.id="att74"/>
+                        <UML:Operation name="setSize(String size)" visibility="public" xmi.id="att75"/>
+                        <UML:Operation name="setPrice(Float price)" visibility="public" xmi.id="att76"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Jacket" xmi.id="cl0009">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="String material" visibility="private" xmi.id="att75"/>
-                        <UML:Operation name="Jacket(String productId, String name, String color, String size," visibility="public" xmi.id="att76"/>
-                        <UML:Operation name="Float price, String material)" xmi.id="att77"/>
-                        <UML:Operation name="getMaterial() : String" visibility="public" xmi.id="att78"/>
-                        <UML:Operation name="setMaterial(String material)" visibility="public" xmi.id="att79"/>
-                        <UML:Operation name="getType() : String" visibility="public" xmi.id="att80"/>
-                        <UML:Operation name="toString() : String" visibility="public" xmi.id="att81"/>
+                        <UML:Attribute name="String material" visibility="private" xmi.id="att77"/>
+                        <UML:Operation name="Jacket(String productId, String name, String color, String size," visibility="public" xmi.id="att78"/>
+                        <UML:Operation name="Float price, String material)" xmi.id="att79"/>
+                        <UML:Operation name="getMaterial() : String" visibility="public" xmi.id="att80"/>
+                        <UML:Operation name="setMaterial(String material)" visibility="public" xmi.id="att81"/>
+                        <UML:Operation name="getType() : String" visibility="public" xmi.id="att82"/>
+                        <UML:Operation name="setCustomAttribute(Scanner sc)" visibility="public" xmi.id="att83"/>
+                        <UML:Operation name="toString() : String" visibility="public" xmi.id="att84"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Jeans" xmi.id="cl0010">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="String fit" visibility="private" xmi.id="att82"/>
-                        <UML:Operation name="Jeans(String productId, String name, String color, String size," visibility="public" xmi.id="att83"/>
-                        <UML:Operation name="Float price, String fit)" xmi.id="att84"/>
-                        <UML:Operation name="getFit() : String" visibility="public" xmi.id="att85"/>
-                        <UML:Operation name="setFit(String fit)" visibility="public" xmi.id="att86"/>
-                        <UML:Operation name="getType() : String" visibility="public" xmi.id="att87"/>
-                        <UML:Operation name="toString() : String" visibility="public" xmi.id="att88"/>
+                        <UML:Attribute name="String fit" visibility="private" xmi.id="att85"/>
+                        <UML:Operation name="Jeans(String productId, String name, String color, String size," visibility="public" xmi.id="att86"/>
+                        <UML:Operation name="Float price, String fit)" xmi.id="att87"/>
+                        <UML:Operation name="getFit() : String" visibility="public" xmi.id="att88"/>
+                        <UML:Operation name="setFit(String fit)" visibility="public" xmi.id="att89"/>
+                        <UML:Operation name="getType() : String" visibility="public" xmi.id="att90"/>
+                        <UML:Operation name="setCustomAttribute(Scanner sc)" visibility="public" xmi.id="att91"/>
+                        <UML:Operation name="toString() : String" visibility="public" xmi.id="att92"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Shoes" xmi.id="cl0011">
                     <UML:Classifier.feature>
-                        <UML:Operation name="Shoes(String productId, String name, String color, String size, Float price)" visibility="public" xmi.id="att89"/>
-                        <UML:Operation name="getType() : String" visibility="public" xmi.id="att90"/>
+                        <UML:Operation name="Shoes(String productId, String name, String color, String size, Float price)" visibility="public" xmi.id="att93"/>
+                        <UML:Operation name="getType() : String" visibility="public" xmi.id="att94"/>
+                        <UML:Operation name="setCustomAttribute(Scanner sc)" visibility="public" xmi.id="att95"/>
+                        <UML:Operation name="toString() : String" visibility="public" xmi.id="att96"/>
                     </UML:Classifier.feature>
                 </UML:Class>
             </UML:Namespace.ownedElement>

@@ -40,7 +40,7 @@ public class Cli {
      *
      * @return an array of strings where each element is a word from the input command
      */
-    public String[] readCommands() {
+    private String[] readCommands() {
         String input = sc.nextLine().toLowerCase();
         return input.split(" ");
     }
