@@ -88,6 +88,14 @@ public class Crud {
 
     }
 
+    /**
+     * Deletes a product from the products list.
+     * If the ID isn't found, it displays a message indicating it.
+     *
+     * This method is used by the {@link CLI.Commands#deleteProduct()} method.
+     *
+     * @param productId The ID of the product to delete
+     */
     public void deleteProduct(String productId) {
         Iterator<ClothingItem> iterator = products.iterator();
         boolean found = false;
@@ -108,7 +116,6 @@ public class Crud {
             System.out.println("Product with ID " + productId + " not found");
         }
     }
-
 
     /**
      * Loads the products from the input object stream by calling

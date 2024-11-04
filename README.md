@@ -33,6 +33,7 @@ Products loaded successfully
 
 OPTIONS:
     add product     : create and add a product (asks for item type, color, size...etc)
+    delete product  : delete a product (asks for the product ID)
     list            : list all the products
     exit            : exit the CLI
 ```
