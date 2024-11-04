@@ -47,7 +47,7 @@ The program uses object persistence using Java's ```ObjectOutputStream```and ```
 <br>
 
 <p align="center">
-  <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/khalidCEU/proyecto1/refs/heads/main/docs/diagram.puml" alt="Class Diagram" width=40%>
+  <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/KhalidCEU/proyecto1/refs/heads/main/docs/diagram.puml" alt="Class Diagram" width=40%>
 </p>
 
 > You can also find this diagram in **XMI format** [here](/docs/diagram.xmi)
