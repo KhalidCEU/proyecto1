@@ -39,7 +39,7 @@ class Crud {
         String color, String size, float price) : ClothingItem
     +readProducts()
     +updateProduct
-    +deleteProduct()
+    +deleteProduct(String productId)
     +loadProducts()
     +saveProducts()
 }
