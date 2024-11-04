@@ -18,6 +18,7 @@ public class Handler {
      */
     public Handler(Commands commandsObject) {
         commands.put("add product", commands -> commandsObject.createProduct());
+        commands.put("delete product", commands -> commandsObject.deleteProduct());
         commands.put("list", commands -> commandsObject.list());
         commands.put("exit", commands -> commandsObject.exit());
     }

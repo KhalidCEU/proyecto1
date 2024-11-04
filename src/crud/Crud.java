@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import java.util.function.Supplier;
 
@@ -87,9 +88,27 @@ public class Crud {
 
     }
 
-    public void deleteProduct() {
+    public void deleteProduct(String productId) {
+        Iterator<ClothingItem> iterator = products.iterator();
+        boolean found = false;
 
+        while (iterator.hasNext()) {
+            ClothingItem item = iterator.next();
+
+            if (item.getProductId().equals(productId)) {
+                System.out.println("Found item : \n\n" + item.toString() + "\n");
+                iterator.remove();
+                found = true;
+                System.out.println("Item " + productId + " removed succesfully" );
+                return;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Product with ID " + productId + " not found");
+        }
     }
+
 
     /**
      * Loads the products from the input object stream by calling

@@ -63,6 +63,12 @@ public class Commands {
         crud.createProduct(type, name, color, size, price);
     }
 
+    public void deleteProduct() {
+        System.out.println("Enter the ID of the product to delete: ");
+        String id = sc.nextLine();
+        crud.deleteProduct(id);
+    }
+
     /**
      * Lists all the existing products.
      *
