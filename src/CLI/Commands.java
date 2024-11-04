@@ -29,7 +29,7 @@ public class Commands {
      *
      * This method prompts the user's to enter the type of product
      * they want to create, collects them and passes them as parameters
-     * to the {@link Crud#createProduct(String, String, String, String, String, float)} method
+     * to the {@link Crud#createProduct(String, String, String, String, float)} method
      *
      * This method is called when the "add product" command is entered in the CLI
      */
@@ -60,7 +60,7 @@ public class Commands {
         System.out.println("Enter a price for this product: ");
         float price = Float.parseFloat(sc.nextLine());
 
-        crud.createProduct(type, "1", name, color, size, price);
+        crud.createProduct(type, name, color, size, price);
     }
 
     /**

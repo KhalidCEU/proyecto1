@@ -30,15 +30,14 @@ public class Crud {
      * item's attributes and adds the product to the products ArrayList.
      *
      * @param productType The type of the clothing item.
-     * @param productId The id of the clothing item.
      * @param name The name of the clothing item.
      * @param color The color of the clothing item.
      * @param size The size of the clothing item.
      * @param price The price of the clothing item.
      * @return The created ClothingItem object added to the products list.
      */
-    public ClothingItem createProduct(String productType, String productId,
-        String name,String color, String size, float price) {
+    public ClothingItem createProduct(String productType, String name,
+        String color, String size, float price) {
 
         Supplier<ClothingItem> itemSupplier = itemTypesMap.get(productType);
 
@@ -46,6 +45,8 @@ public class Crud {
             System.out.println("Invalid product type: " + productType);
             return null;
         }
+
+        String productId = Integer.toString(products.size() + 1);
 
         ClothingItem item = itemSupplier.get();
         item.setProductId(productId);

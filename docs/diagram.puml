@@ -35,8 +35,8 @@ class Crud {
     -ArrayList<ClothingItem> products
     -StorageManager storageManager
     +Crud()
-    +createProduct(String productType, String productId,
-        String name, String color, String size, float price) : ClothingItem
+    +createProduct(String productType, String name,
+        String color, String size, float price) : ClothingItem
     +readProducts()
     +updateProduct
     +deleteProduct()
