@@ -17,8 +17,8 @@ public class Handler {
      * execute for each command.
      */
     public Handler(Commands commandsObject) {
-        commands.put("add product", commands -> commandsObject.createProduct());
-        commands.put("delete product", commands -> commandsObject.deleteProduct());
+        commands.put("add", commands -> commandsObject.createProduct());
+        commands.put("delete", commands -> commandsObject.deleteProduct());
         commands.put("list", commands -> commandsObject.list());
         commands.put("exit", commands -> commandsObject.exit());
     }

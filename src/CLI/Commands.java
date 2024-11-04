@@ -31,7 +31,7 @@ public class Commands {
      * they want to create, collects them and passes them as parameters
      * to the {@link Crud#createProduct(String, String, String, String, float)} method
      *
-     * This method is called when the "add product" command is entered in the CLI
+     * This method is called when the "add" command is entered in the CLI
      */
     public void createProduct() {
         System.out.println("Enter the type of product you want to create: "
